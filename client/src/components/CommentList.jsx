@@ -9,7 +9,9 @@ const CommentList = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get("/api/v1/comments");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/v1/comments`
+        );
         setComments(response.data.data.comments);
       } catch (error) {
         console.error("Error fetching comments:", error);

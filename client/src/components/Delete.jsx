@@ -7,7 +7,9 @@ const Delete = ({ id }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/v1/comments/${id}`);
+      await axios.delete(
+        `${import.meta.env.VITE_API_URL}/api/v1/comments/${id}`
+      );
       window.location.reload();
     } catch (error) {
       console.error("Delete failed:", error);

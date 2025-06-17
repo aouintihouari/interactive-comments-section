@@ -34,23 +34,32 @@ const CommentForm = ({
     try {
       let response;
       if (editMode) {
-        response = await axios.patch(`/api/v1/comments/${commentId}`, {
-          content: trimmedContent,
-        });
+        response = await axios.patch(
+          `${import.meta.env.VITE_API_URL}/api/v1/comments/${commentId}`,
+          {
+            content: trimmedContent,
+          }
+        );
         onSubmitSuccess(response.data.data.comment, "edit");
         if (onEditDone) onEditDone();
       } else if (type === "reply") {
-        response = await axios.post(`/api/v1/comments/${parentId}/replies`, {
-          content: trimmedContent,
-          user: "684c63a4f75704297ab13b5c",
-          replyingToUser,
-        });
+        response = await axios.post(
+          `${import.meta.env.VITE_API_URL}/api/v1/comments/${parentId}/replies`,
+          {
+            content: trimmedContent,
+            user: "684c63a4f75704297ab13b5c",
+            replyingToUser,
+          }
+        );
         onSubmitSuccess(response.data.data.reply, "reply");
       } else {
-        response = await axios.post("/api/v1/comments", {
-          content,
-          user: "684c63a4f75704297ab13b5c",
-        });
+        response = await axios.post(
+          `${import.meta.env.VITE_API_URL}/api/v1/comments`,
+          {
+            content,
+            user: "684c63a4f75704297ab13b5c",
+          }
+        );
         onSubmitSuccess(response.data.data.comment, "comment");
       }
       setContent("");

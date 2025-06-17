@@ -7,9 +7,12 @@ const VoteButtons = ({ score = 0, vote, commentId }) => {
   const handleVote = async (type) => {
     if (type === currentVote) return;
     try {
-      const res = await axios.patch(`/api/v1/comments/${commentId}/vote`, {
-        type,
-      });
+      const res = await axios.patch(
+        `${import.meta.env.VITE_API_URL}/api/v1/comments/${commentId}/vote`,
+        {
+          type,
+        }
+      );
       const newVote = res.data.data.comment.vote;
       const newScore = res.data.data.comment.score;
       setCurrentVote(newVote);
