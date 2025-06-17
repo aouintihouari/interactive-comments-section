@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --text-preset-1--font-size: 24px;
+  --text-preset-1--line-height: 120%;
+  --text-preset-1--letter-spacing: 0px;
+  --text-preset-2-md--font-size: 16px;
+  --text-preset-2-md--line-height: 150%;
+  --text-preset-2-md--letter-spacing: 0px;
+  --text-preset-2-reg--font-size: 16px;
+  --text-preset-2-reg--line-height: 150%;
+  --text-preset-2-reg--letter-spacing: 0px;
+  --text-preset-3--font-size: 13px;
+  --text-preset-3--line-height: 120%;
+  --text-preset-3--letter-spacing: 0px;
+  --font-rubik: "Rubik", sans-serif;
+}
+
+@layer utilities {
+  .text-preset-1 {
+    font-family: var(--font-rubik);
+    font-weight: 500;
+    font-size: var(--text-preset-1--font-size);
+    line-height: var(--text-preset-1--line-height);
+    letter-spacing: var(--text-preset-1--letter-spacing);
+  }
+  .text-preset-2-md {
+    font-family: var(--font-rubik);
+    font-weight: 500;
+    font-size: var(--text-preset-2-md--font-size);
+    line-height: var(--text-preset-2-md--line-height);
+    letter-spacing: var(--text-preset-2-md--letter-spacing);
+  }
+  .text-preset-2-reg {
+    font-family: var(--font-rubik);
+    font-weight: 400;
+    font-size: var(--text-preset-2-reg--font-size);
+    line-height: var(--text-preset-2-reg--line-height);
+    letter-spacing: var(--text-preset-2-reg--letter-spacing);
+  }
+  .text-preset-3 {
+    font-family: var(--font-rubik);
+    font-weight: 500;
+    font-size: var(--text-preset-3--font-size);
+    line-height: var(--text-preset-3--line-height);
+    letter-spacing: var(--text-preset-3--letter-spacing);
+  }
+  .text-grey-800 {
+    color: #334253;
+  }
+  .text-grey-500 {
+    color: #67727e;
+  }
+  .text-grey-100 {
+    color: #e0e0f0;
+  }
+  .text-grey-50 {
+    color: #f5f6fa;
+  }
+  .text-purple-600 {
+    color: #5357b6;
+  }
+  .text-purple-200 {
+    color: #c5c6ef;
+  }
+  .text-pink-400 {
+    color: #ed6368;
+  }
+  .text-pink-200 {
+    color: #ffb8bb;
+  }
+  .bg-grey-800 {
+    background-color: #334253;
+  }
+  .bg-grey-500 {
+    background-color: #67727e;
+  }
+  .bg-grey-100 {
+    background-color: #e0e0f0;
+  }
+  .bg-grey-50 {
+    background-color: #f5f6fa;
+  }
+  .bg-purple-600 {
+    background-color: #5357b6;
+  }
+  .bg-purple-200 {
+    background-color: #c5c6ef;
+  }
+  .bg-pink-400 {
+    background-color: #ed6368;
+  }
+  .bg-pink-200 {
+    background-color: #ffb8bb;
+  }
+  .spacing-100 {
+    padding: 8px;
+  }
+  .spacing-200 {
+    padding: 16px;
+  }
+  .spacing-300 {
+    padding: 24px;
+  }
+  .spacing-400 {
+    padding: 40px;
+  }
+  .px-100 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .px-200 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .px-300 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .px-400 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .py-100 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .py-200 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .py-300 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .py-400 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .m-100 {
+    margin: 8px;
+  }
+  .m-200 {
+    margin: 16px;
+  }
+  .m-300 {
+    margin: 24px;
+  }
+  .m-400 {
+    margin: 40px;
+  }
+  .mt-100 {
+    margin-top: 8px;
+  }
+  .mb-200 {
+    margin-bottom: 16px;
+  }
+  .ml-300 {
+    margin-left: 24px;
+  }
+  .mr-400 {
+    margin-right: 40px;
+  }
+}
