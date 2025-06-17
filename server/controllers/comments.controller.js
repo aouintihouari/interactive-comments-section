@@ -29,7 +29,7 @@ export const createComment = async (req, res) => {
   try {
     const { content, user } = req.body;
     let newComment = await Comment.create({ content, user });
-    newComment = await newComment.populate("user", "username image"); // populate juste username et image
+    newComment = await newComment.populate("user", "username image");
     res.status(201).json({ success: true, data: { comment: newComment } });
   } catch (error) {
     console.error("Error creating comment:", error);

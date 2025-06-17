@@ -1,4 +1,3 @@
-import CommentForm from "./components/CommentForm.jsx";
 import CommentList from "./components/CommentList.jsx";
 
 function App() {
